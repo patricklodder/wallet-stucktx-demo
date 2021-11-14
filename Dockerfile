@@ -16,4 +16,6 @@ RUN git clone -b v1.14.5 https://github.com/dogecoin/dogecoin.git && \
     dogecoin/qa/pull-tester/install-deps.sh && \
     rm -rf dogecoin
 
+COPY demo.py .
 
+CMD ["python3", "demo.py", "--srcdir=bin"]
